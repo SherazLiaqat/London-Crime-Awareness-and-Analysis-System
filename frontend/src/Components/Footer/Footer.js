@@ -15,26 +15,8 @@ function Footer() {
     <div className="footer-container">
       <section className="footer-subscription">
         <p className="footer-subscription-heading">
-          Join the Disaster Volunteer Connecction and help people to Survive at
-          the time of Disaster
+          you can ensure the safety of your family at all times.
         </p>
-        <p className="footer-subscription-text">
-          You can Search anything here.
-        </p>
-        <div className="input-areas">
-          <form>
-            <input
-              className="footer-input"
-              name="Search"
-              type="text"
-              placeholder="Search."
-              to="/Blog"
-            />
-            <Link to="/Blog">
-              <button className="Button">Search</button>
-            </Link>
-          </form>
-        </div>
       </section>
       <div className="footer-links">
         <div className="footer-link-wrapper">
@@ -106,12 +88,12 @@ function Footer() {
         <div class="social-media-wrap">
           <div class="footer-logo">
             <Link to="/" className="social-logo">
-              DAS
               <FaMedrt />
+              HCES
             </Link>
           </div>
           <ul className="website-rights">
-            &copy;{new Date().getFullYear()} Disaster Assistance | All rights
+            &copy;{new Date().getFullYear()} Household Crime Estimation | All rights
             reserved | Terms Of Service | Privacy Policy
           </ul>
 

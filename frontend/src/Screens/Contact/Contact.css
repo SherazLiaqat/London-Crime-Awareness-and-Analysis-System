@@ -1,0 +1,13 @@
+.Button-home3 {
+  cursor: pointer;
+  color: white;
+  background-color: var(--buttonBackground);
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+  padding: 11px 24.75px;
+  font-size: 20px;
+
+  outline: none;
+  margin-bottom: 40px;
+}

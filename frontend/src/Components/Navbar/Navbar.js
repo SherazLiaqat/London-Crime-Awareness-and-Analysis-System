@@ -95,7 +95,7 @@ function Navbar() {
               </Link>
             </li>
 
-            <li
+            {/* <li
               className="nav-item"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
@@ -116,7 +116,7 @@ function Navbar() {
                 Flood <IoMdArrowDropdown onClick />
               </Link>
               {dropdowns && <Dropdowns />}
-            </li>
+            </li> */}
 
             <li className="nav-item">
               <Link to="/Live" className="nav-links" onClick={closeMobileMenu}>
@@ -125,7 +125,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link to="/Event" className="nav-links" onClick={closeMobileMenu}>
-                Event
+                Historical Data
               </Link>
             </li>
 

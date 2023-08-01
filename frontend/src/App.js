@@ -1,6 +1,11 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+} from "react-router-dom";
 //import './App.css';
 import Footer from "./components/Footer/Footer";
 import Signup from "./components/Pages/Authenticationpages/Signuppages/Signup";
@@ -15,7 +20,7 @@ import Fireinfo from "./components/Pages/Infopages/Fireinfo";
 import Covid19 from "./components/Pages/Infopages/Covid-19info";
 
 import About from "./components/Pages/Extrapages/About";
-import Contact from "./components/Pages/Extrapages/Contact";
+import Contact from "./Screens/Contact/Contact";
 
 import Death from "./components/Pages/Estimationpages/Earthquake/Death";
 
@@ -61,24 +66,20 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="/Awareness" element={<Awareness />} />
           <Route path="/Contact" element={<Contact />} />
-
           <Route path="/Death" element={<Death />} />
           <Route path="/Dead" element={<Dead />} />
-
           <Route path="/sign-up" element={<Signup />} />
           <Route path="/Login" element={<Login />} />
           {/* <Route path="/profile" component={Profile} /> */}
           {/* <Route path="/logout" component={Logout} /> */}
           {/* <Route path="/Event" element={<Event />} /> */}
           <Route path="/Live" element={<Live />} />
-
           {/* <Route path="/BlogData/:slug" component={BlogData} /> */}
           <Route path="/MyNews" element={<MyNews />} />
           <Route path="/MyBlog" element={<MyBlog />} exact />
           {/* <Route path="/Floodevent" component={FloodEventpage} exact /> */}
           {/* <Route path="/Earthquakecsv" component={EarthquakeCsv} exact /> */}
           {/* <Route path="/Floodeventcsv" component={FloodCsv} exact /> */}
-
           <Route path="/Earthquakeinfo" element={<Earthquakeinfo />} exact />
           <Route path="/Floodinfo" element={<Floodinfo />} exact />
           <Route path="/Fireinfo" element={<Fireinfo />} exact />
