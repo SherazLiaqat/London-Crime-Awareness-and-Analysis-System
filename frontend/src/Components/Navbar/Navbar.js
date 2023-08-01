@@ -91,7 +91,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Awareness
+                Crime Awareness
               </Link>
             </li>
 
@@ -120,7 +120,7 @@ function Navbar() {
 
             <li className="nav-item">
               <Link to="/Live" className="nav-links" onClick={closeMobileMenu}>
-                Live
+                News
               </Link>
             </li>
             <li className="nav-item">
@@ -129,24 +129,28 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/Api" className="nav-links" onClick={closeMobileMenu}>
                 Weather
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link
-                to="/Login"
+                to="/Estimation"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
-                Log In
+                Estimation
               </Link>
             </li>
           </ul>
 
-          {button && <Button buttonStyle="btn--outline">LOG IN</Button>}
+          {button && (
+            <Link to="/Estimation">
+              <Button buttonStyle="btn--outline">Estimation</Button>
+            </Link>
+          )}
         </div>
       </nav>
     </>

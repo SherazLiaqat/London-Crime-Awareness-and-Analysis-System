@@ -7,6 +7,7 @@ import {
   Routes,
 } from "react-router-dom";
 //import './App.css';
+import Estimation from "./Screens/Estimation/Estimation";
 import Footer from "./components/Footer/Footer";
 import Signup from "./components/Pages/Authenticationpages/Signuppages/Signup";
 import Awareness from "./components/Pages/Awareness";
@@ -42,6 +43,7 @@ import DeadResult from "./components/ResultPages/Flood/DeadResult";
 
 import MyNews from "./components/News/News";
 import { Scroller } from "./components/Scroller";
+import HistoricalData from "./Screens/HistoricalData/HistoricalData";
 
 // import Demo from "./components/Demo";
 
@@ -64,6 +66,7 @@ function App() {
         <Routes>
           <Route path="/Navbar" element={<Navbar />} exact />
           <Route path="/" element={<Home />} exact />
+          <Route path="/Estimation" element={<Estimation />} />
           <Route path="/Awareness" element={<Awareness />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Death" element={<Death />} />
@@ -72,7 +75,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           {/* <Route path="/profile" component={Profile} /> */}
           {/* <Route path="/logout" component={Logout} /> */}
-          {/* <Route path="/Event" element={<Event />} /> */}
+          <Route path="/Event" element={<HistoricalData />} />
           <Route path="/Live" element={<Live />} />
           {/* <Route path="/BlogData/:slug" component={BlogData} /> */}
           <Route path="/MyNews" element={<MyNews />} />
