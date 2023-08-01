@@ -1,114 +1,161 @@
-import React from 'react';
-import './Footer.css';
-import {Link} from 'react-router-dom'
-import { Link as LinkR} from 'react-router-dom';
-import { Link as LinkS} from 'react-scroll';
-import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin,FaPhoneAlt} from 'react-icons/fa';
-import {IoLocationSharp} from 'react-icons/io5'
-import {IoMailSharp} from 'react-icons/io5'
-import { VscTwitter} from 'react-icons/vsc';
-import { FiMap } from "react-icons/fi";
+import React from "react";
+import "./Footer.css";
+import { Link } from "react-router-dom";
+import {
+  FaMedrt,
+  FaFacebookF,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
+import { VscTwitter } from "react-icons/vsc";
 
 function Footer() {
   return (
-    <div className='footer-container'>
-     
-      <div className='footer-links'>
-        <div className='footer-link-wrapper'>
-       
-          <div className='footer-link-items'>
-            <h2>Project</h2>
-            <LinkS to='Portfolio' target="_blank"> Latest Release</LinkS>
-            
-            <LinkS style={{color:'#fff'}} spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to='Portfolio' >Update</LinkS>
-            
-            
-            <LinkS to='Portfolio'>GitHubProject</LinkS>
+    <div className="footer-container">
+      <section className="footer-subscription">
+        <p className="footer-subscription-heading">
+          Join the Disaster Volunteer Connecction and help people to Survive at
+          the time of Disaster
+        </p>
+        <p className="footer-subscription-text">
+          You can Search anything here.
+        </p>
+        <div className="input-areas">
+          <form>
+            <input
+              className="footer-input"
+              name="Search"
+              type="text"
+              placeholder="Search."
+              to="/Blog"
+            />
+            <Link to="/Blog">
+              <button className="Button">Search</button>
+            </Link>
+          </form>
+        </div>
+      </section>
+      <div className="footer-links">
+        <div className="footer-link-wrapper">
+          <div className="footer-link-items">
+            <h2>Quick Links</h2>
+            <Link to="/About" target="_blank">
+              {" "}
+              About Us
+            </Link>
+
+            <Link to="/Contact" target="_blank">
+              Contact Us
+            </Link>
+            <Link to="/MyBlog">Blog</Link>
+            <Link to="/MyNews">News</Link>
           </div>
-          <div className='footer-link-items'>
-            <h2>Company</h2>
-            <LinkS to='Home'>Home</LinkS>
-            <LinkS to='Portfolio'>Portfolio</LinkS>
-            <LinkS to='Blog'>Technology</LinkS>
-            
-            
+          <div className="footer-link-items">
+            <h2>Contact Us</h2>
+            <Link to="/Eartquakeinfo">Contact</Link>
+            <Link to="/">Support</Link>
+            <Link to="/">Destinations</Link>
+            <Link to="/">Sponsorships</Link>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>Quick_Links</h2>
-            <LinkS to='Service' target="_blank">Services</LinkS>
-            <LinkS to='About' target="_blank">About-Us</LinkS>
-            <LinkS to='Contact' target="_blank">Contact</LinkS>
-            
-            
+        <div className="footer-link-wrapper">
+          <div className="footer-link-items">
+            <h2>Awareness</h2>
+            <Link to="/Earthquakeinfo" target="_blank">
+              Earthquake
+            </Link>
+            <Link to="/Floodinfo" target="_blank">
+              Flood
+            </Link>
+            <Link to="/Covid-19info" target="_blank">
+              Covid-19
+            </Link>
+            <Link to="/Fireinfo" target="_blank">
+              Fire
+            </Link>
+            <Link to="/Locust" target="_blank">
+              Locust
+            </Link>
           </div>
-          <div className='footer-link-items'>
-            <h2>Contact</h2>
-            <LinkR to={{ pathname: "https://www.instagram.com/" }} target="_blank">
-<IoLocationSharp/>&nbsp;111 Service Rd E, h-19/3, Islamabad </LinkR>
-            
-            <LinkR  to={{ pathname: "https://www.facebook.com/" }} target="_blank"><IoMailSharp/>&nbsp;@gmail.com</LinkR>
-            
-            <LinkR  to={{ pathname: "https://twitter.com/" }} target="_blank"><FaPhoneAlt/>&nbsp;+92 11 1111111</LinkR>
-            
+          <div className="footer-link-items">
+            <h2>Social Media</h2>
+            <Link
+              to={{ pathname: "https://www.instagram.com/" }}
+              target="_blank"
+            >
+              Instagram
+            </Link>
+
+            <Link
+              to={{ pathname: "https://www.facebook.com/" }}
+              target="_blank"
+            >
+              Facebook
+            </Link>
+            <Link to={{ pathname: "https://www.youtube.com/" }} target="_blank">
+              Youtube
+            </Link>
+            <Link to={{ pathname: "https://twitter.com/" }} target="_blank">
+              Twitter
+            </Link>
           </div>
         </div>
       </div>
-      
-      <section class='social-media' >
-        <div class='social-media-wrap'>
-         
+      <section class="social-media">
+        <div class="social-media-wrap">
+          <div class="footer-logo">
+            <Link to="/" className="social-logo">
+              DAS
+              <FaMedrt />
+            </Link>
+          </div>
           <ul className="website-rights">
-            &copy;{new Date().getFullYear()} website | All rights reserved |
-            Terms Of Service | Privacy Policy
+            &copy;{new Date().getFullYear()} Disaster Assistance | All rights
+            reserved | Terms Of Service | Privacy Policy
           </ul>
-        
-          <div class='social-icons'>
-            <LinkR
-              class='social-icon-link facebook'
-              to={{ pathname: "https://www.facebook.com/" }} 
+
+          <div class="social-icons">
+            <Link
+              class="social-icon-link facebook"
+              to={{ pathname: "https://www.facebook.com/" }}
               target="_blank"
-              aria-label='Facebook'
+              aria-label="Facebook"
             >
-              <FaFacebookF/>
-            </LinkR>
-            <LinkR
-              class='social-icon-link instagram'
+              <FaFacebookF />
+            </Link>
+            <Link
+              class="social-icon-link instagram"
               to={{ pathname: "https://www.instagram.com/" }}
-              target='_blank'
-              aria-label='Instagram'
+              target="_blank"
+              aria-label="Instagram"
             >
-              <FaInstagram/>
-            </LinkR>
-            <LinkR
-              class='social-icon-link youtube'
+              <FaInstagram />
+            </Link>
+            <Link
+              class="social-icon-link youtube"
               to={{ pathname: "https://www.youtube.com/" }}
-              target='_blank'
-              aria-label='Youtube'
+              target="_blank"
+              aria-label="Youtube"
             >
-              <FaYoutube/>
-            </LinkR>
-            <LinkR
-              class='social-icon-link twitter'
+              <FaYoutube />
+            </Link>
+            <Link
+              class="social-icon-link twitter"
               to={{ pathname: "https://twitter.com/" }}
-              target='_blank'
-              aria-label='Twitter'
+              target="_blank"
+              aria-label="Twitter"
             >
-              <VscTwitter/>
-            </LinkR>
-            <LinkR
-              class='social-icon-link twitter'
-              to={{ pathname:'https://www.linkedin.com/'}}
-              target='_blank'
-              aria-label='LinkedIn'
+              <VscTwitter />
+            </Link>
+            <Link
+              class="social-icon-link twitter"
+              to={{ pathname: "https://www.linkedin.com/" }}
+              target="_blank"
+              aria-label="LinkedIn"
             >
-              <FaLinkedin/>
-            </LinkR>
+              <FaLinkedin />
+            </Link>
           </div>
         </div>
       </section>
