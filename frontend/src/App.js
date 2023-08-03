@@ -10,7 +10,7 @@ import {
 import Estimation from "./Screens/Estimation/Estimation";
 import Footer from "./components/Footer/Footer";
 import Signup from "./components/Pages/Authenticationpages/Signuppages/Signup";
-import Awareness from "./components/Pages/Awareness";
+import Awareness from "./Screens/Crime Awarenes/Awareness";
 import Home from "./components/Pages/Home";
 
 import Earthquakeinfo from "./components/Pages/Infopages/Earthquakeinfo";
@@ -44,6 +44,7 @@ import DeadResult from "./components/ResultPages/Flood/DeadResult";
 import MyNews from "./components/News/News";
 import { Scroller } from "./components/Scroller";
 import HistoricalData from "./Screens/HistoricalData/HistoricalData";
+import CrimeStatistics from "./Screens/Crime Statistics/CrimeStatistics";
 
 // import Demo from "./components/Demo";
 
@@ -68,6 +69,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="/Estimation" element={<Estimation />} />
           <Route path="/Awareness" element={<Awareness />} />
+          <Route path="/CrimeStatistics" element={<CrimeStatistics />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Death" element={<Death />} />
           <Route path="/Dead" element={<Dead />} />

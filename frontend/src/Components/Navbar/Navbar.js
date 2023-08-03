@@ -117,7 +117,15 @@ function Navbar() {
               </Link>
               {dropdowns && <Dropdowns />}
             </li> */}
-
+            <li className="nav-item">
+              <Link
+                to="/CrimeStatistics"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Crime Statistics
+              </Link>
+            </li>
             <li className="nav-item">
               <Link to="/Live" className="nav-links" onClick={closeMobileMenu}>
                 News

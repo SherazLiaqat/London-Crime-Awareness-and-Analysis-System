@@ -1,73 +1,65 @@
 import React from "react";
-import {
-  CartesianGrid,
-  BarChart,
-  Bar,
-  Legend,
-  Line,
-  LineChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
-const data = [
-  { name: "2017", react: 32, angular: 37, vue: 60 },
-  { name: "2018", react: 42, angular: 42, vue: 54 },
-  { name: "2019", react: 51, angular: 41, vue: 54 },
-  { name: "2020", react: 60, angular: 37, vue: 28 },
-  { name: "2021", react: 51, angular: 31, vue: 27 },
-  { name: "2022", react: 95, angular: 44, vue: 49 },
-];
+import { Bar, Line, Pie } from "react-chartjs-2";
+// import "./HistoricalData.css";
 const HistoricalData = () => {
+  // Sample data (replace this with your actual data)
+  const barChartData = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+      {
+        label: "Household Crimes Per Month",
+        backgroundColor: "rgba(75,192,192,0.2)",
+        borderColor: "rgba(75,192,192,1)",
+        borderWidth: 1,
+        hoverBackgroundColor: "rgba(75,192,192,0.4)",
+        hoverBorderColor: "rgba(75,192,192,1)",
+        data: [65, 59, 80, 81, 56, 55],
+      },
+    ],
+  };
+
+  const lineChartData = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+      {
+        label: "Maximum Household Crimes Per Month",
+        fill: false,
+        lineTension: 0.5,
+        backgroundColor: "rgba(75,192,192,1)",
+        borderColor: "rgba(0,0,0,1)",
+        borderWidth: 2,
+        data: [65, 59, 80, 81, 56, 55],
+      },
+    ],
+  };
+
+  const pieChartData = {
+    labels: ["Robbery", "Burglary", "Assault", "Vandalism"],
+    datasets: [
+      {
+        data: [300, 50, 100, 150],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#FF8C00"],
+        hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#FF8C00"],
+      },
+    ],
+  };
+
   return (
-    <>
-      {/* Line chart */}
-      <h3 style={{ textAlign: "center" }}>Line Chart</h3>
-      <LineChart width={600} height={300} data={data}>
-        <Line
-          type="monotone"
-          dataKey="react"
-          stroke="#2196F3"
-          strokeWidth={3}
-        />
-        <Line
-          type="monotone"
-          dataKey="angular"
-          stroke="#F44236"
-          strokeWidth={3}
-        />
-        <Line type="monotone" dataKey="Affected" stroke="#FFCA29" strokeWidth={3} />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-      </LineChart>
-      {/* Bar chart */}
-      <h3 style={{ textAlign: "center" }}>Bar Chart</h3>
-      <BarChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="angular" fill="#8884d8" />
-        <Bar dataKey="vue" fill="#82ca9d" />
-      </BarChart>
-      {/* Bar chart */}
-      <h3 style={{ textAlign: "center" }}>Pie Chart</h3>
-      
-    </>
+    <div className="container">
+      <h2>Historical Data</h2>
+      <div className="chart-container">
+        <h3>Bar Chart</h3>
+        <Bar data={barChartData} />
+      </div>
+      <div className="chart-container">
+        <h3>Line Chart</h3>
+        <Line data={lineChartData} />
+      </div>
+      <div className="chart-container">
+        <h3>Pie Chart</h3>
+        <Pie data={pieChartData} />
+      </div>
+    </div>
   );
 };
 
