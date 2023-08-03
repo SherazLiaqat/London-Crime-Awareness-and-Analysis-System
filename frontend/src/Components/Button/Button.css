@@ -2,7 +2,9 @@
   --primary: #fff;
   --buttonFont: #fff;
   --buttonBackground: #ef476fff;
-  --screenbackground:#ef476f1e;
+  --screenbackground: #ef476f1e;
+  --secondColor: #b6cd87;
+  --thirdColor: #8064a1;
 }
 
 .btn {

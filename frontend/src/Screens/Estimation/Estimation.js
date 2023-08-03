@@ -113,7 +113,7 @@ const CrimeStatistics = () => {
                       predictions.maxCrimesPerMonth,
                       predictions.minCrimesPerMonth,
                     ],
-                    backgroundColor: ["#007bff", "#28a745", "#dc3545"],
+                    backgroundColor: ["#b6cd87", "#8064a1", "#ef476fff"],
                     borderWidth: 1,
                   },
                 ],

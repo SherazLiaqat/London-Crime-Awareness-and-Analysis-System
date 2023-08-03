@@ -1,8 +1,7 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from '../../components/Card/CardItems';
-import Earthquakeinfo from '../../components/Pages/Infopages/Earthquakeinfo';
-import Awareness from '../../components/Pages/Awareness';
+
 function Cards() {
   return (
     <div className='cards'>

@@ -89,7 +89,7 @@ body {
 .statistic-value {
   font-size: 24px;
   font-weight: bold;
-  color: #007bff;
+  color: var(--buttonBackground);
 }
 
 /* Chart Container */

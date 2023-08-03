@@ -1,46 +1,123 @@
-/* HistoricalData.css */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* event.css */
+.div-main {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+.country-selecter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formControl {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.formControl:hover {
+  border-color: #999;
+}
+
+.google-map {
+  height: 70vh;
+  margin-bottom: 5%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.event-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.event-bar {
+  width: 60%;
+}
+
+.event-container-Blog {
+  width: 60%;
+}
+
+.event-container-pie {
+  width: 30%;
+}
+
+.event-container-HeavyRain {
+  width: 40%;
+}
+
+.event-container-HeavyRain h1,
+.event-container-Blog h1,
+.event-container-pie h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-container-HeavyRain p,
+.event-container-Blog p,
+.event-container-pie p {
+  font-size: 14px;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .event-container {
+    flex-direction: column;
   }
-  
-  h2 {
-    text-align: center;
+
+  .event-container-HeavyRain,
+  .event-container-Blog,
+  .event-container-pie {
+    width: 100%;
     margin-bottom: 20px;
   }
-  
-  h3 {
-    margin-bottom: 10px;
-  }
-  
-  .chart-container {
-    margin-bottom: 30px;
-  }
-  
-  /* Customize chart colors and styles */
-  /* Bar Chart */
-  .Bar {
-    background-color: rgba(75, 192, 192, 0.2);
-    border-color: rgba(75, 192, 192, 1);
-  }
-  
-  /* Line Chart */
-  .Line {
-    background-color: rgba(75, 192, 192, 1);
-    border-color: rgba(0, 0, 0, 1);
-    border-width: 2px;
-  }
-  
-  /* Pie Chart */
-  .Pie {
-    background-color: #FF6384;
-  }
-  
-  /* Media Query for responsiveness */
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  }
-  
+}
+/* Add any global styles here */
+
+.div-main {
+  margin: 2% 5%;
+}
+
+.country-selecter {
+  text-align: center;
+  margin: 2% 0;
+}
+
+.event-container-HeavyRain,
+.event-container-Blog,
+.event-container-pie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Add flex-wrap to wrap charts to new line if needed */
+}
+
+/* Adjust the styles for the Google Map */
+.google-map-react {
+  height: 300px; /* Set the desired height of the map */
+  margin-bottom: 20px;
+}
+
+/* Add any other styles specific to your components */
