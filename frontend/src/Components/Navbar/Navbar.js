@@ -12,13 +12,20 @@ import { IoMdArrowDropdown } from "react-icons/io";
 //import {fatimes} from 'react-icons/fa';
 
 function Navbar() {
+  const [Navbar, setNavbar] = useState(false);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [dropdown, setDropdown] = useState(false);
   const [dropdowns, setDropdowns] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
+  const changebackground = () => {
+    if (window.scrollY >= 125) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -63,10 +70,10 @@ function Navbar() {
       setDropdowns(false);
     }
   };
-
+  window.addEventListener("scroll", changebackground);
   return (
     <>
-      <nav className="navbar">
+      <nav className={Navbar ? "navbar active" : "navbar"}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             <FaMedrt />
