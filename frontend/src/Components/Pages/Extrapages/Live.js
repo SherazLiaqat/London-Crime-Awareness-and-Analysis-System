@@ -1,45 +1,44 @@
-import React from 'react'
-import Cards from '../../Card/Cards'
-import './Live.css';
-import CardItem from '../../Card/CardItems';
-const Live = () => {
-    return (
-        <div className='live'>
-            <h1 className='live-heading'>Explore The Live Information About Disaster</h1><br/><br/>
-            
-            <ul className='cards__items'>
-            <CardItem
-              src='images\Floodlive.jpg'
-              text='Explore the Flood Information...'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-              label='Flood'
+function LatestCrimeNews() {
+  const [latestCrimes, setLatestCrimes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-              
+  useEffect(() => {
+    fetchLatestCrimes();
+  }, []);
 
-              path='/FloodLive'
-             
+  const fetchLatestCrimes = async () => {
+    try {
+      const response = await axios.get(
+        "https://data.police.uk/api/crimes-street/all-crime"
+      );
+      setLatestCrimes(response.data);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Error fetching latest crime data:", error);
+      setIsLoading(false);
+    }
+  };
 
-              target="_blank"
-
-            />
-            <CardItem
-              src='images/corona.jpg'
-              text='Explore the COVID-19 Information...'
-              label='COVID-19'
-              path='/CovidLive'
-              target="_blank"
-              
-            />
-            <CardItem
-              src='images/Live.jpg'
-              text='Explore the Earthquake Information...'
-              label='Earthquake'
-              path='/EarthquakeLive'
-              target="_blank"
-            />
-          </ul>
-        </div>
-    )
+  return (
+    <div>
+      <h2>Latest Crime News</h2>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {latestCrimes.map((crime) => (
+            <li key={crime.id}>
+              <strong>{crime.category}</strong> reported on {crime.date} at{" "}
+              {crime.location.street.name}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
 
-export default Live
+export default LatestCrimeNews;

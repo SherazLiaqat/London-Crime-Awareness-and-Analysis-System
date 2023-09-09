@@ -8,11 +8,10 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div id="About" className="Portfolio-container">
+    <div className="Portfolio-container">
       <h5 style={{ textAlign: "center", color: "#ef476fff" }}> About Us</h5>
       <h1>Who We Are </h1>
 
-      {/* <p className="text">The Ultimate Finger Licking Dishes .</p> */}
       <div className="About-text-img">
         <img className="aboutimage" src={aboutimage} />
 
@@ -39,7 +38,7 @@ const About = () => {
           helping to spread crime awareness.
         </p>
 
-        <img className="aboutimage" src={about2image} />
+        <img className="aboutimage2" src={about2image} />
       </div>
     </div>
   );

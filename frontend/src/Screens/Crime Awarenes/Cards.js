@@ -18,9 +18,8 @@ function Cards() {
       </h5>
       <h1>Crime Awareness </h1>
       <p style={{ textAlign: "center" }}>
-        By utilizing Historical Data, HCES offers insights into crime patterns
-        and behavior. Our powerful Estimation engine can provide you with a view
-        into what tomorrow's crime trends and problem areas may be.
+        Stay informed about various types of crimes and learn how to protect
+        yourself and your loved ones.
       </p>
 
       <div className="cards__container">
@@ -28,49 +27,48 @@ function Cards() {
           <ul className="cards__items">
             <CardItem
               icon={target_hardening}
-              text="Target Hardening"
-              para="Making your property harder for an offender to access."
-              point1="Upgrading the locks on your doors, windows, sheds and outbuildings."
-              point2="Fitting sash jammers to vulnerable doors and windows."
-              point3="Using secure passwords to prevent criminals hacking your online accounts."
+              text="Theft"
+              para="Unauthorized taking of another person's property."
+              point1="Lock doors and windows when leaving home."
+              point2="Avoid leaving valuables in plain sight."
+              point3="Use high-quality locks and security systems."
             />
 
             <CardItem
               icon={reducing_the_means}
-              text="Reducing the Means"
-              para="Removing items that may help commit an offence."
+              text="Burglary"
+              para="Breaking into a building with the intent to commit a crime."
               path="/Floodinfo"
-              point1="Not leaving tools and ladders in the garden and clearing up any rubble/bricks."
-              point2="Keeping wheelie bins out of reach, as they may be a climbing aid or help transport items."
-              point3="Making sure that bricks and rubble are cleared up."
+              point1=" motion-activated lights around your property."
+              point2="Secure sliding doors with a rod or bar."
+              point3="deadbolt locks on all exterior doors."
             />
           </ul>
           <ul className="cards__items">
             <CardItem
               icon={access_control}
-              text="Access Control"
-              para="Looking at measures that will control access to a location, a person or object.
-  "
-              point1="Locking your doors and windows to both your house and your vehicle."
-              point2="Ensuring that fencing, hedges, walls and other boundary treatments are in a good state of repair."
-              point3="Putting a security system in place at a commercial site (entry barriers, security guards, ID cards)."
+              text="Assault"
+              para="Intentionally causing physical harm to another person."
+              point1="Stay aware of your surroundings and trust your instincts."
+              point2="Avoid confrontational situations and heated arguments."
+              point3="Take self-defense classes to build confidence and skills."
             />
+
             <CardItem
               icon={environmental_change}
-              text="Environmental Change"
-              para="Ensuring your property and wider community looks cared for."
-              point1="Ensuring that graffiti and domestic/commercial waste is cleared up."
-              point2="Reporting issues with fly-tipping or broken street lights to the relevant authority."
-              point3="Working with the police and local authority to close a footpath.
-               "
+              text="Robbery"
+              para="Using force or threat to steal from someone."
+              point3=" vigilant in unfamiliar areas, especially at night."
+              point2="Avoid displaying valuable items like jewelry or electronics."
+              point1="only necessary items and use well-lit ATMs."
             />
             <CardItem
               icon={deflecting_offenders}
-              text="Deflecting Offenders "
-              para="Deterring an offender or deflecting their intention."
-              point1="Using timer switches to make our homes look occupied if vacant after the hours of darkness."
-              point2="Running youth diversionary schemes with partner agencies."
-              point3="Referring offenders to drug rehabilitation programmes."
+              text="Scams "
+              para="Deceptive schemes to gain personal information or money."
+              point1="Avoid confrontational situations and heated arguments."
+              point2="Take self-defense classes to build confidence and skills."
+              point3="Stay aware of your surroundings and trust your instincts."
             />
           </ul>
         </div>

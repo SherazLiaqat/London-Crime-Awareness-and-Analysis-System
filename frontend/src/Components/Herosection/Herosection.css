@@ -5,6 +5,7 @@
   position: fixed;
   z-index: -1;
   top: 0;
+  opacity: 78;
 }
 
 .hero-container {
@@ -18,6 +19,7 @@
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit:contain;
   object-fit: cover ;
+ 
 }
 
 .hero-container > h1 {
@@ -133,3 +135,75 @@
     margin-top: 1rem;
   }
 }
+/* Your existing CSS */
+
+/* ... */
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+  .hero-container > p {
+    font-size: 18px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    text-align: center;
+  }
+  .Button-home {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+  .Button-home2 {
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+  .hero-container > p {
+    font-size: 24px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  .Button-home {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  .Button-home2 {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .hero-container > h1 {
+    font-size: 40px;
+    margin-top: -100px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .hero-container > p {
+    font-size: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .hero-btns {
+    text-align: center;
+  }
+  .Button-home,
+  .Button-home2 {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+}
+

@@ -10,6 +10,8 @@ const CrimeStatistics = () => {
 
   // Dummy data for the crime statistics
   const dummyData = {
+    RiskRate: "High",
+    crimeType: "Theft",
     maxHouseholdCrimesPerYear: "100",
     maxCrimesPerMonth: "25",
     minCrimesPerMonth: "5",
@@ -76,11 +78,10 @@ const CrimeStatistics = () => {
           <div className="statistics">
             <div className="statistic">
               <h2 className="statistic-title">
-                Maximum Number of Household Crimes Per Year
+                RiskRate
+                {/* Maximum Number of Household Crimes Per Year */}
               </h2>
-              <p className="statistic-value">
-                {predictions.maxHouseholdCrimesPerYear}
-              </p>
+              <p className="statistic-value">{predictions.RiskRate}</p>
             </div>
             <div className="statistic">
               <h2 className="statistic-title">
@@ -89,10 +90,8 @@ const CrimeStatistics = () => {
               <p className="statistic-value">{predictions.maxCrimesPerMonth}</p>
             </div>
             <div className="statistic">
-              <h2 className="statistic-title">
-                Minimum Number of Crimes Per Month
-              </h2>
-              <p className="statistic-value">{predictions.minCrimesPerMonth}</p>
+              <h2 className="statistic-title">Crime Type</h2>
+              <p className="statistic-value">{predictions.crimeType}</p>
             </div>
           </div>
 

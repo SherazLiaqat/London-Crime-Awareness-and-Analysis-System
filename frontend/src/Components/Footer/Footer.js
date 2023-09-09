@@ -13,53 +13,28 @@ import { VscTwitter } from "react-icons/vsc";
 function Footer() {
   return (
     <div className="footer-container">
-      <section className="footer-subscription">
-        <p className="footer-subscription-heading">
-          you can ensure the safety of your family at all times.
-        </p>
-      </section>
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>Quick Links</h2>
             <Link to="/About" target="_blank">
-              {" "}
               About Us
             </Link>
 
             <Link to="/Contact" target="_blank">
               Contact Us
             </Link>
-            <Link to="/MyBlog">Blog</Link>
+
             <Link to="/MyNews">News</Link>
           </div>
           <div className="footer-link-items">
-            <h2>Contact Us</h2>
-            <Link to="/Eartquakeinfo">Contact</Link>
-            <Link to="/">Support</Link>
-            <Link to="/">Destinations</Link>
-            <Link to="/">Sponsorships</Link>
+            <h2>Features</h2>
+            <Link to="/Awareness">Crime Awareness</Link>
+            <Link to="/Estimation">Crime Estimation</Link>
+            <Link to="/Event">Historical Data</Link>
           </div>
         </div>
         <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>Awareness</h2>
-            <Link to="/Earthquakeinfo" target="_blank">
-              Earthquake
-            </Link>
-            <Link to="/Floodinfo" target="_blank">
-              Flood
-            </Link>
-            <Link to="/Covid-19info" target="_blank">
-              Covid-19
-            </Link>
-            <Link to="/Fireinfo" target="_blank">
-              Fire
-            </Link>
-            <Link to="/Locust" target="_blank">
-              Locust
-            </Link>
-          </div>
           <div className="footer-link-items">
             <h2>Social Media</h2>
             <Link
@@ -75,15 +50,14 @@ function Footer() {
             >
               Facebook
             </Link>
-            <Link to={{ pathname: "https://www.youtube.com/" }} target="_blank">
-              Youtube
-            </Link>
+
             <Link to={{ pathname: "https://twitter.com/" }} target="_blank">
               Twitter
             </Link>
           </div>
         </div>
       </div>
+
       <section class="social-media">
         <div class="social-media-wrap">
           <div class="footer-logo">
@@ -93,8 +67,8 @@ function Footer() {
             </Link>
           </div>
           <ul className="website-rights">
-            &copy;{new Date().getFullYear()} Household Crime Estimation | All rights
-            reserved | Terms Of Service | Privacy Policy
+            &copy;{new Date().getFullYear()} Household Crime Estimation | All
+            rights reserved | Terms Of Service | Privacy Policy
           </ul>
 
           <div class="social-icons">
@@ -114,14 +88,7 @@ function Footer() {
             >
               <FaInstagram />
             </Link>
-            <Link
-              class="social-icon-link youtube"
-              to={{ pathname: "https://www.youtube.com/" }}
-              target="_blank"
-              aria-label="Youtube"
-            >
-              <FaYoutube />
-            </Link>
+
             <Link
               class="social-icon-link twitter"
               to={{ pathname: "https://twitter.com/" }}

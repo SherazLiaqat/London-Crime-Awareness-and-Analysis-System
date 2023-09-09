@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "../../App.css";
 import "./Herosection.css";
-import { IoMdArrowDropdown } from "react-icons/io";
+
 import homeimage from "../../Static/house.jpg";
 import { Link } from "react-router-dom";
-import Downs from "../Navbar/Downs";
 
 function Herosection() {
   return (
@@ -18,7 +17,9 @@ function Herosection() {
       </p>
 
       <div className="hero-btns">
-        <button className="Button-home2">Secure Now</button>
+        <Link to="/Estimation">
+          <button className="Button-home2">Secure Now</button>
+        </Link>
       </div>
     </div>
   );
