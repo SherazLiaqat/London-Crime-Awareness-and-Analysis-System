@@ -163,7 +163,7 @@ function Navbar() {
 
           {button && (
             <Link to="/Estimation">
-              <Button buttonStyle="btn--outline">Estimation</Button>
+              <Button buttonStyle="btn--background">Estimation</Button>
             </Link>
           )}
         </div>

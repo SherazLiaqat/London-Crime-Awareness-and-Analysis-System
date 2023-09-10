@@ -35,14 +35,12 @@ h1 {
 
 .cards__item__icon {
   color: var(--buttonBackground);
-  
+
   height: 50px;
   width: 50px;
 }
 ::marker {
   color: var(--buttonBackground);
- 
-  
 }
 .MuiSvgIcon-root {
   width: 2em !important;
