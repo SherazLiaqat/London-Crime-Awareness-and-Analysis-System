@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "hces.apps.StudentsConfig",
+    "hces",
     'corsheaders',
     'rest_framework',
 ]

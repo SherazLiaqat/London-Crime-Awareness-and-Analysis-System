@@ -1,37 +1,19 @@
 import React, { useState } from "react";
-import "./Estimation.css";
-import { Chart } from "react-chartjs-2";
+import { useNavigate } from "react-router-dom";
 
-const CrimeStatistics = () => {
+import "./Estimation.css";
+
+const Estimation = () => {
   const [postcode, setPostcode] = useState("");
   const [distance, setDistance] = useState(0);
-  const [crimeType, setCrimeType] = useState("All");
-  const [predictions, setPredictions] = useState(null);
-
-  // Dummy data for the crime statistics
-  const dummyData = {
-    RiskRate: "High",
-    crimeType: "Theft",
-    maxHouseholdCrimesPerYear: "100",
-    maxCrimesPerMonth: "25",
-    minCrimesPerMonth: "5",
-  };
-
-  const handlePostcodeChange = (e) => {
-    setPostcode(e.target.value);
-  };
-
-  const handleDistanceChange = (e) => {
-    setDistance(e.target.value);
-  };
-
-  const handleCrimeTypeChange = (e) => {
-    setCrimeType(e.target.value);
-  };
+  const [crimeType, setCrimeType] = useState("");
+  const navigate = useNavigate();
 
   const handlePredict = () => {
-    // Replace this with actual API call to get predictions based on postcode, distance, and crime type
-    setPredictions(dummyData);
+    // Perform any necessary calculations or API calls here
+    // For demonstration purposes, we'll navigate to the result page immediately
+
+    navigate("/EstimationResult");
   };
 
   return (
@@ -40,97 +22,54 @@ const CrimeStatistics = () => {
       <div className="crime-inputs">
         <label htmlFor="postcode">Postcode:</label>
         <input
+          placeholder="eg. EC1A 7AZ"
           type="text"
           id="postcode"
           value={postcode}
-          onChange={handlePostcodeChange}
+          onChange={(e) => setPostcode(e.target.value)}
         />
 
         <label htmlFor="distance">Distance Range (miles):</label>
-        <select id="distance" value={distance} onChange={handleDistanceChange}>
-          <option value="0">0 miles</option>
+        <select
+          id="distance"
+          value={distance}
+          onChange={(e) => setDistance(e.target.value)}
+        >
+          <option value="0">0 mile</option>
           <option value="1">1 mile</option>
           <option value="2">2 miles</option>
           <option value="3">3 miles</option>
           <option value="4">4 miles</option>
           <option value="5">5 miles</option>
         </select>
-
         <label htmlFor="crimeType">Crime Type:</label>
         <select
           id="crimeType"
           value={crimeType}
-          onChange={handleCrimeTypeChange}
+          onChange={(e) => setCrimeType(e.target.value)}
         >
-          <option value="All">All</option>
           <option value="Burglary">Burglary</option>
           <option value="Robbery">Robbery</option>
-          <option value="Assault">Assault</option>
+          <option value="Anti-social behaviour">Anti-social behaviour</option>
+          <option value="Bicycle theft">Bicycle theft</option>
+          <option value="Criminal damage and arson">Criminal damage and arson</option>
+          <option value="Drugs">Drugs</option>
           <option value="Theft">Theft</option>
-          {/* Add more crime types as needed */}
+          <option value="Possession of weapons">Possession of weapons</option>
+          <option value="Public disorder and weapons">Public disorder and weapons</option>
+          <option value="Public order">Public order</option>
+          <option value="Shoplifting">Shoplifting</option>
+          <option value="Theft from the person">Theft from the person</option>
+          <option value="Vehicle crime">Vehicle crime</option>
+          <option value="Violence and sexual offences">Violence and sexual offences</option>
+          <option value="Violent crime">Violent crime</option>
+          <option value="Others">Others</option>
         </select>
 
         <button onClick={handlePredict}>Predict</button>
       </div>
-
-      {predictions && (
-        <>
-          <div className="statistics">
-            <div className="statistic">
-              <h2 className="statistic-title">
-                RiskRate
-                {/* Maximum Number of Household Crimes Per Year */}
-              </h2>
-              <p className="statistic-value">{predictions.RiskRate}</p>
-            </div>
-            <div className="statistic">
-              <h2 className="statistic-title">
-                Maximum Number of Crimes Per Month
-              </h2>
-              <p className="statistic-value">{predictions.maxCrimesPerMonth}</p>
-            </div>
-            <div className="statistic">
-              <h2 className="statistic-title">Crime Type</h2>
-              <p className="statistic-value">{predictions.crimeType}</p>
-            </div>
-          </div>
-
-          <div className="chart-container">
-            <Chart
-              type="bar"
-              data={{
-                labels: [
-                  "Maximum Household Crimes",
-                  "Maximum Crimes Per Month",
-                  "Minimum Crimes Per Month",
-                ],
-                datasets: [
-                  {
-                    label: "Number of Crimes",
-                    data: [
-                      predictions.maxHouseholdCrimesPerYear,
-                      predictions.maxCrimesPerMonth,
-                      predictions.minCrimesPerMonth,
-                    ],
-                    backgroundColor: ["#b6cd87", "#8064a1", "#ef476fff"],
-                    borderWidth: 1,
-                  },
-                ],
-              }}
-              options={{
-                responsive: true,
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                  },
-                },
-              }}
-            />
-          </div>
-        </>
-      )}
     </div>
   );
 };
 
-export default CrimeStatistics;
+export default Estimation;

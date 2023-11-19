@@ -1,0 +1,45 @@
+/* CrimeNews.css */
+h4 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #1976D2;
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #777;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  cursor: pointer;
+}
+
+.page-item.active .page-link {
+  background-color: #1976D2;
+  border-color: #1976D2;
+}
+
+.page-link {
+  color: #1976D2;
+}

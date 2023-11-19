@@ -1,5 +1,4 @@
 .navbar {
-  background: transparent;
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
 
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
@@ -15,7 +14,12 @@
 .navbar.active {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
 }
-
+.transparent {
+  background: transparent;
+}
+.black {
+  background-color: black;
+}
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -71,10 +75,17 @@
   color: var(--mainColor);
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
+  color: #fff;
+  font-size: bold;
+}
+.nav-links.active {
+  color: var(--mainColor);
+  border-bottom: 4px solid #fff;
 }
 .nav-item > .active {
   color: var(--mainColor);
   border-bottom: 4px solid #fff;
+
 }
 
 .fa-bars {
@@ -84,7 +95,9 @@
 .nav-links-mobile {
   display: none;
 }
-
+.nav-item > .active {
+    color: var(--secondColor);
+  }
 .menu-icon {
   display: none;
 }

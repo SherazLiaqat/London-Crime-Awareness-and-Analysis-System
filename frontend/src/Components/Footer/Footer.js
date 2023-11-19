@@ -62,12 +62,11 @@ function Footer() {
         <div class="social-media-wrap">
           <div class="footer-logo">
             <Link to="/" className="social-logo">
-              <FaMedrt />
-              HCES
+              LCES
             </Link>
           </div>
           <ul className="website-rights">
-            &copy;{new Date().getFullYear()} Household Crime Estimation | All
+            &copy;{new Date().getFullYear()} London Crime Estimation | All
             rights reserved | Terms Of Service | Privacy Policy
           </ul>
 

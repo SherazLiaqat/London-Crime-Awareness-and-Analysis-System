@@ -9,7 +9,7 @@ function Herosection() {
   return (
     <div className="hero-container">
       <img className="image" src={homeimage} />
-      <h1>Secure Your Household from Crime</h1>
+      <h1>Secure Your City from Crime</h1>
       <p>
         you can ensure the safety of your family at all times.Our advanced
         system: Household Estimation System helps you stay abreast of changing

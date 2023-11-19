@@ -1,31 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
-import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import Dropdowns from "./Dropdowns";
-import { FaHome } from "react-icons/fa";
-import { FaMedrt } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IoMdArrowDropdown } from "react-icons/io";
-
-//import {fatimes} from 'react-icons/fa';
 
 function Navbar() {
+  const { pathname } = useLocation();
   const [Navbar, setNavbar] = useState(false);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [dropdown, setDropdown] = useState(false);
-  const [dropdowns, setDropdowns] = useState(false);
+
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const changebackground = () => {
+
+  const changeBackground = () => {
     if (window.scrollY >= 125) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
   };
+
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -39,45 +34,18 @@ function Navbar() {
   }, []);
 
   window.addEventListener("resize", showButton);
+  window.addEventListener("scroll", changeBackground);
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
-  };
-
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
-  const onMouseEnters = () => {
-    if (window.innerWidth < 960) {
-      setDropdowns(false);
-    } else {
-      setDropdowns(true);
-    }
-  };
-
-  const onMouseLeaves = () => {
-    if (window.innerWidth < 960) {
-      setDropdowns(false);
-    } else {
-      setDropdowns(false);
-    }
-  };
-  window.addEventListener("scroll", changebackground);
   return (
     <>
-      <nav className={Navbar ? "navbar active" : "navbar"}>
+      <nav
+        className={`navbar ${
+          Navbar || pathname !== "/" ? "black" : "transparent"
+        }`}
+      >
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <FaMedrt />
-            HCES
+            LCES
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? (
@@ -88,79 +56,52 @@ function Navbar() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <NavLink
+                to="/"
+                exact
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
+              <NavLink
                 to="/Awareness"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Crime Awareness
-              </Link>
+              </NavLink>
             </li>
-
-            {/* <li
-              className="nav-item"
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            >
-              <Link className="nav-links" onClick={closeMobileMenu}>
-                Earthquake
-                <IoMdArrowDropdown onClick />
-              </Link>
-
-              {dropdown && <Dropdown />}
-            </li>
-            <li
-              className="nav-item"
-              onMouseEnter={onMouseEnters}
-              onMouseLeave={onMouseLeaves}
-            >
-              <Link className="nav-links" onClick={closeMobileMenu}>
-                Flood <IoMdArrowDropdown onClick />
-              </Link>
-              {dropdowns && <Dropdowns />}
-            </li> */}
             <li className="nav-item">
-              <Link
+              <NavLink
                 to="/CrimeStatistics"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Crime Statistics
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/Live" className="nav-links" onClick={closeMobileMenu}>
-                News
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Event" className="nav-links" onClick={closeMobileMenu}>
-                Historical Data
-              </Link>
-            </li>
-
-            {/* <li className="nav-item">
-              <Link to="/Api" className="nav-links" onClick={closeMobileMenu}>
-                Weather
-              </Link>
-            </li> */}
-
-            <li>
-              <Link
-                to="/Estimation"
-                className="nav-links-mobile"
+              <NavLink
+                to="/CrimeNews"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Estimation
-              </Link>
+                News
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/Event"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Historical Data
+              </NavLink>
             </li>
           </ul>
-
           {button && (
             <Link to="/Estimation">
               <Button buttonStyle="btn--background">Estimation</Button>

@@ -2,7 +2,6 @@ import React from "react";
 import aboutimage from "../../Static/contact1.png";
 import about2image from "../../Static/about2.png";
 import "./About.css";
-import { AiOutlineSolution } from "react-icons/ai";
 
 import "./About.css";
 
@@ -17,7 +16,7 @@ const About = () => {
 
         <p>
           <strong>Crime Awareness</strong> <br />
-          By utilizing Historical Data, HCES offers insights into crime patterns
+          By utilizing Historical Data, LCES offers insights into crime patterns
           and behavior. Our powerful Estimation engine can provide you with a
           view into what tomorrow's crime trends and problem areas may be.
         </p>
@@ -26,16 +25,16 @@ const About = () => {
         <p>
           <strong>Our Vision</strong> <br />
           To establish Crime Stoppers as the Premier Community Based Crime
-          Solving Program in the United States.
+          Solving Program in the United Kingdom.
           <br />
           <strong>Our Mission</strong> <br />
           To develop innovative resources and partnerships that promote Crime
-          Stoppers throughout the United States.
+          Stoppers throughout the United Kingdom.
           <br />
           <strong>Our Solutions</strong> <br />
-          With the Household Crime System, you can keep your home and family
-          safe by monitoring crime in your area, storing household records, and
-          helping to spread crime awareness.
+          With the London Crime System, you can keep your city and family safe
+          by monitoring crime in your area, storing crime records, and helping
+          to spread crime awareness.
         </p>
 
         <img className="aboutimage2" src={about2image} />
